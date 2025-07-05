@@ -21,6 +21,8 @@ function App () {
       <App1   />
       <App2   />
       <MyFooter />
+      <Warna  />
+      <Warna1  />
     </>
   );
 }
@@ -79,6 +81,40 @@ class App2 extends React.Component {
     )
       
   }
+}
+
+
+// cth menggunakan inline style
+function Warna() {
+    const styles = {
+        color: "green",
+        fontSize: "16px",
+        backgroundColor: "lightgray",
+
+    };
+
+return(
+    <>
+    <p style={styles}>ini adalah teks dengan inline style</p>
+    </>
+)
+}
+
+// atau kek gini
+
+function Warna1() {
+    return(
+        <>
+        <p 
+        style={{
+            color: "red",
+            fontSize: "16px",
+            backgroundColor: "lightgray"
+        }}>
+            ini adalah text dengan inline style2
+        </p>
+        </>
+    )
 }
 
 
