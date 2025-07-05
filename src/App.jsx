@@ -1,5 +1,9 @@
 //  import Footer from './components/Footer';
+ import "./App.css"; // ✅ Tambahkan titik dan slash untuk path relatif
+import styles from './App.module.css';
 import React from 'react';
+import Card from "./Card"; // ✅ Tanpa .jsx juga bisa
+
 
 
 
@@ -23,6 +27,9 @@ function App () {
       <MyFooter />
       <Warna  />
       <Warna1  />
+      <App3  />
+      <Card  />
+      <Navbar />
     </>
   );
 }
@@ -115,6 +122,27 @@ function Warna1() {
         </p>
         </>
     )
+}
+
+
+// cth eksternal
+
+function App3() {
+    return(
+        <div>
+            <p className="text1">Eksternal Style</p>
+        </div>
+    );
+}
+
+
+// cth module
+function Navbar() {
+  return (
+    <div>
+      <p className={styles.text}>css module</p>
+    </div>
+  );
 }
 
 
